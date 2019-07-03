@@ -20,7 +20,7 @@ namespace BikeSharing.Clients.iOS
                 TextColor = UIColor.White
             });
 
-			InitHockeyApp();
+			//InitHockeyApp();
 
 			#if ENABLE_TEST_CLOUD
 			Xamarin.Calabash.Start();
@@ -42,7 +42,7 @@ namespace BikeSharing.Clients.iOS
         {
             var manager = BITHockeyManager.SharedHockeyManager;
             manager.Configure(GlobalSettings.HockeyAppAPIKeyForiOS);
-			manager.CrashManager.CrashManagerStatus = BITCrashManagerStatus.AutoSend;
+            manager.CrashManager.CrashManagerStatus = BITCrashManagerStatus.AutoSend;
             manager.StartManager();
         }
     }
